@@ -1,0 +1,102 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    font-family: Arial;
+}
+
+#box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 2% 0%;
+}
+
+#box .parts {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+#box .parts #greenBox, #redBox, #yellowBox, #blueBox {
+    width: 200px;
+    height: 200px;
+    border: 4px solid black;
+}
+
+#box .parts #greenBox {
+    background-color: green;
+    border-top-left-radius: 20px;
+    border-left: 8px solid black;
+    border-top: 8px solid black;
+}
+
+#box .parts #redBox {
+    background-color: red;
+    border-top-right-radius: 20px;
+    border-right: 8px solid black;
+    border-top: 8px solid black;
+}
+
+#box .parts #yellowBox {
+    background-color: yellow;
+    border-bottom-left-radius: 20px;
+    border-left: 8px solid black;
+    border-bottom: 8px solid black;
+}
+
+#box .parts #blueBox {
+    background-color: blue;
+    border-bottom-right-radius: 20px;
+    border-right: 8px solid black;
+    border-bottom: 8px solid black;
+}
+
+#score {
+    font-weight: bold;
+    font-size: 2em;
+    margin-bottom: 3%;
+}
+
+#playButton {
+    padding: 6px 20px;
+    font-size: 20px;
+    border-radius: 6px;
+    background-color: rgb(75, 75, 193);
+    color: #FFF;
+    border: 2px solid rgb(75, 75, 193);
+    transition: 0.4s ease-in-out;
+}
+
+#playButton:hover {
+    transform: scale(1.1);
+}
+
+.circle {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    background-color: rgb(255, 221, 221);
+    border-radius: 50%;
+    animation: animate .3s linear forwards;
+}
+
+@keyframes animate {
+    0% {
+        width: 0px;
+        height: 0px;
+        opacity: 1;
+    }
+    70% {
+        opacity: 1;
+    }
+    100% {
+        width: 60px;
+        height: 60px;
+        opacity: 0;
+    }
+}
